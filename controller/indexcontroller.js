@@ -16,3 +16,6 @@ exports.indexlistget=(req,res)=>{
         messages:messages
     });
 };
+exports.newformget=(req,res)=>{
+    res.render("newform");
+};
