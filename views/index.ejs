@@ -6,17 +6,21 @@
     <title>Mini Message Board</title>
 </head>
 <body>
-    <a href="./new">Click Here for new form</a>
-    <ul>
+    <a href="./new">Click Here for new message form</a>
+ <h1>The Messages in the Message Board are!</h1>
         <li>
+            <% let i=1%>
    <% messages.forEach((message)=> { %>
    <ul>
-    <li>Text:<%= message.text%></li>
+     <h2>Message<%=i%></h2>
+    <!-- <li>Text:<%= message.text%></li>
     <li>User:<%= message.user%></li>
-    <li>Added:<%= message.added%></li>
+    <li>Added:<%= message.added%></li> -->
+    <button onclick="window.location.href='./message/<%=i%>'">Open here for the full details</button>
+    <%i++%>
    </ul>
    <% });%>
 </li>
-</ul>
+
 </body>
 </html>

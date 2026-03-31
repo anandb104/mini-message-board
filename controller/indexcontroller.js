@@ -29,3 +29,8 @@ exports.newformpost=(req,res)=>{
     });
     res.redirect("/");
 };
+exports.messageget=(req,res)=>{
+    const id=req.params.id;
+    const message=messages[id-1];
+    res.render("message",{message});
+};
