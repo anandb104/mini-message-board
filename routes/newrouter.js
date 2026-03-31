@@ -1,2 +1,3 @@
-const {router}=require("express");
-const newrouter=router();
+const {Router}=require("express");
+const newrouter=Router();
+module.exports=newrouter;

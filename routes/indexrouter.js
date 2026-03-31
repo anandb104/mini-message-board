@@ -1,5 +1,5 @@
-const {router}=require("express");
-const indexrouter=router();
+const {Router}=require("express");
+const indexrouter=Router();
 const messages = [
     {
       text: "Hi there!",
@@ -12,4 +12,5 @@ const messages = [
       added: new Date()
     }
   ];
+  module.exports=indexrouter;
   
