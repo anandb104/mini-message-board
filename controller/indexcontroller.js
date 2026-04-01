@@ -1,36 +1,23 @@
 const indexrouter=require("../routes/indexrouter");
-const messages = [
-    {
-      text: "Hi there!",
-      user: "Amando",
-      added: new Date()
-    },
-    {
-      text: "Hello World!",
-      user: "Charles",
-      added: new Date()
-    }
-  ];
-exports.indexlistget=(req,res)=>{
+const pool=require("../db/pool.js");
+exports.indexlistget=async(req,res)=>{
+    const rows=await pool.query('SELECT * FROM messages');
     res.render("index",{
-        messages:messages
+        messages:rows
     });
 };
 exports.newformget=(req,res)=>{
     res.render("newform");
 };
-exports.newformpost=(req,res)=>{
+exports.newformpost=async(req,res)=>{
     const name=req.body.name;
     const message=req.body.message;
-    messages.push({
-        text:message,
-        user:name,
-        added:new Date(),
-    });
+    await pool.query('INSERT INTO messages (text,user_name) VALUE ($1,$2)',[message,name]);
     res.redirect("/");
 };
-exports.messageget=(req,res)=>{
+exports.messageget=async(req,res)=>{
     const id=req.params.id;
-    const message=messages[id-1];
+    const row=pool.query('SELECT * FROM messages WHERE id=$1',[id-1]);
+    const message=row[0];
     res.render("message",{message});
 };
