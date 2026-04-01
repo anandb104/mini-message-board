@@ -17,7 +17,7 @@ exports.newformpost=async(req,res)=>{
 };
 exports.messageget=async(req,res)=>{
     const id=req.params.id;
-    const {row}=await pool.query('SELECT * FROM messages WHERE id=$1',[id-1]);
+    const {row}=await pool.query('SELECT * FROM messages WHERE id=$1',[id]);
     const message=row[0];
     res.render("message",{message});
 };
