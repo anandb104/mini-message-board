@@ -1,5 +1,5 @@
-const {pool}=require("pg");
+const {Pool}=require("pg");
 
-module.exports=new pool({
+module.exports=new Pool({
     connectionString:"process.env.DATABASE_URL"
 });
