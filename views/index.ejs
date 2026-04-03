@@ -7,7 +7,7 @@
     <title>Mini Message Board</title>
 </head>
 <body>
-    <a href="./new">Click Here for new message form</a>
+    <button id="message-btn" onclick="window.location.href='./new'"><img src="../images/message.jpg" id="message-img"></button>
     <div>
 <img src="../../images/title.png" id="banner">
 </div>
@@ -20,7 +20,7 @@
     <!-- <li>Text:<%= message.text%></li>
     <li>User:<%= message.user%></li>
     <li>Added:<%= message.added%></li> -->
-    <button onclick="window.location.href='./message/<%=message.id%>'"><img src="../../images/redirect.svg" id="redirect"></button>
+    <button id="redirect-btn" onclick="window.location.href='./message/<%=message.id%>'"><img src="../../images/redirect.svg" id="redirect"></button>
 
 </div> 
      </div>

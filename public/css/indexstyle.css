@@ -24,14 +24,14 @@ body{
     justify-content: center;
     align-items: center;
 }
-button{
+#redirect-btn{
    position:absolute;
    top:10px;
    left:10px;
    border-radius: 50%;
    color:white;
 }
-button:hover{
+#redirect-btn:hover{
     background-color: orange;
     border-radius: 50%;
 }
@@ -46,7 +46,7 @@ button:hover{
 }
 #banner{
     background-image:url("../../images/title.png");
-    margin-top:16px;
+    margin-top:35px;
     background-color: aliceblue;
     height:auto;
     width: 94vw;
@@ -59,3 +59,18 @@ button:hover{
     gap:32px;
    overflow: scroll;
 }
+#message-img{
+    border-radius: 50%;
+    height:90px;
+    width:90px;
+}
+#message-btn{
+    border-radius: 50%;
+    position:fixed;
+    top:740px;
+    left:1360px;
+}
+#message-btn:hover{
+    background-color: black;
+}
+
