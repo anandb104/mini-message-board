@@ -3,22 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/indexstyle.css">
     <title>Mini Message Board</title>
 </head>
 <body>
     <a href="./new">Click Here for new message form</a>
- <h1>The Messages in the Message Board are!</h1>
-        <li>
+    <div>
+<img src="../../images/title.png" id="banner">
+</div>
+<div class="message-wrapper">
    <% messages.forEach((message)=> { %>
-   <ul>
-     <h2>Message<%=message.id%></h2>
+     <div class="message-box">
+        <div class="message">
+    <h2>Message <%=message.id%></h2>
+    <h3> A Message from <%= message.user_name%>!</h3>
     <!-- <li>Text:<%= message.text%></li>
     <li>User:<%= message.user%></li>
     <li>Added:<%= message.added%></li> -->
-    <button onclick="window.location.href='./message/<%=message.id%>'">Open here for the full details</button>
-   </ul>
+    <button onclick="window.location.href='./message/<%=message.id%>'"><img src="../../images/redirect.svg" id="redirect"></button>
+
+</div> 
+     </div>
    <% });%>
-</li>
+</div>
 
 </body>
 </html>
