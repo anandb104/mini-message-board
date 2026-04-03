@@ -61,14 +61,14 @@ body{
 }
 #message-img{
     border-radius: 50%;
-    height:90px;
-    width:90px;
+    height:70px;
+    width:70px;
 }
 #message-btn{
     border-radius: 50%;
     position:fixed;
-    top:740px;
-    left:1360px;
+    top:760px;
+    left:1380px;
 }
 #message-btn:hover{
     background-color: black;

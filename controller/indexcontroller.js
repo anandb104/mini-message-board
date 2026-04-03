@@ -12,6 +12,7 @@ exports.newformget=(req,res)=>{
 exports.newformpost=async(req,res)=>{
     const name=req.body.name;
     const message=req.body.message;
+    if(name!="" && message!="")
     await pool.query('INSERT INTO messages (text,user_name) VALUES ($1,$2)',[message,name]);
     res.redirect("/");
 };

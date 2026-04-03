@@ -4,18 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="../images/forum.png">
+    <link rel="stylesheet" href="../css/newformstyle.css">
     <title>New Message Form</title>
 </head>
 <body>
+    <div class="title">
+        Please Enter Your New Message Here!
+    </div>
+    <div id="form-wrapper">
+        <div id="form">
     <h1>
-        Please Insert your New Message Here For Your Message Board Here!
+        New Message!
     </h1>
     <form method="POST" action="./new">
+        <div class="input-wrapper">
         <label for="name">Name:</label>
      <input type="text" name="name" id="name">
+    </div>
+    <div class="input-wrapper">
      <label for="message">Message:</label>
-     <input type="text" name="message" id="message">
+     <textarea rows="8" cols="40" name="message" id="message">
+     </textarea>
+    </div>
+    <div class="btn-wrapper">
      <input type="submit" name="submit" id="submit">
     </form>
+     <button onclick="window.location.href='/'">Home</button>
+    </div>
+</div>
+</div>
 </body>
 </html>
