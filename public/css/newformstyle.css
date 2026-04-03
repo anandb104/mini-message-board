@@ -37,10 +37,12 @@ body{
     justify-content: center;
     align-items: center;
     gap:16px;
+    font-size: 20px;;
 }
 input{
     width:50%;
-    border-radius: 50px;;
+    border-radius: 50px;
+   
 }
 textarea{
     border-radius: 50px;
@@ -50,12 +52,14 @@ button{
     color:white;
     border-radius: 50px;
     width:100px;
+    padding:10px;
 }
 #submit{
     background-color: orange;
     color:white;
     border-radius: 50px;
-    width:100px;
+    width:150px;
+    padding:10px;
 }
 #submit:hover{
     color:white;

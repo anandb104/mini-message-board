@@ -3,15 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/messagestyle.css">
     <link rel="icon" type="image/x-icon" href="../images/forum.png">
     <title>Message Details</title>
 </head>
 <body>
-   <ul>
-    <li>Text:<%=message.text%></li>
-    <li>User:<%=message.user_name%></li>
-    <li>Date Added:<%=message.added%></li>
-    <a href="/">Home</a>
-   </ul>
+    <div>
+        <img src="../../images/title.png" id="banner">
+        </div>
+   <div class="message-wrapper-sticky">
+    <div class="message-wrapper">
+    <div class="username"><%=message.user_name%> Said,</div>
+    <div class="text"><%=message.text%></div>
+    <div class="time">Message Sent At:<%=message.added%></div>
+</div>
+   </div>
+   <button onclick="window.location.href='/'">Home</button>
 </body>
 </html>
